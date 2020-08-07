@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Reactor</title>
+        <script src= 'reactor.js'></script>
+    </head>
+    <body>
+    <div id= 'cont'>
+        Name :
+        <span id= 'fn'>{{firstName}}</span>
+        <span id= 'ln'> {{lastName}}</span>
+        <p id= 'age'>Age : {{age}} Y/O</p>
+    </div>
+    <script>
+        var z = new Reactor({
+            wrapper : '#cont',
+            data : {
+                firstName : 'Toshit',
+                lastName : 'Mall',
+                age : 19
+            },
+            watch : {
+                age : function(n, o){
+                    if(n < o) console.log('You aged back '+(o-n)+'years');
+                    else console.log('You aged '+(n-o)+'years');
+                }
+            }
+        });
+    </script>
+    </body>
+</html>
