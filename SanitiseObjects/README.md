@@ -9,7 +9,7 @@
    {
    type: Array,
    required: true,
-   element: NUmber,
+   element: Number,
    validation: (arr) => arr.every(n => n < 100) 
    }
   ```
