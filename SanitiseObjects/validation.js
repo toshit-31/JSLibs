@@ -14,7 +14,7 @@ const validator = function(rule){
     _keys.forEach(k => {
       // if key is not present in objected then value is set to empty String
       if(!obj[k]) {
-        obj[k] = ""
+        validated[k] = new (rule[k].type)()
         return
       };
       let val = obj[k];
